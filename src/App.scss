@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+// Define variables for common values
+$body-bg: #E1E5EE;
+$font-family: "Rubik";
+$wrapper-bg: #fff;
+$tablinks-bg: #2A324B;
+$tablinks-hover-bg: #ddd;
+$tablinks-active-bg: #fff;
+
+body {
+  background-color: $body-bg;
+  font-family: $font-family;
+  margin: 10rem;
+  min-width: 600px;
+  
+}
+
+.tab-system-wrapper {
+  display: flex;
+  flex-direction: column; 
+  background-color: $wrapper-bg;
+  padding: 4rem;
+}
+
+
+.tablinks {
+  color: #fff;
+  background-color: $tablinks-bg;
+  text-decoration: none;
+  display: flex;
+  border: none;
+  list-style-type: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+  white-space: nowrap;      // prevents wrapping
+  overflow: hidden;         // hides overflowed text
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: $tablinks-hover-bg;
+  }
+
+  &.active {
+    color: black;
+    background-color: $tablinks-active-bg;
+  }
+}
+
+.tabcontent {
+  background-color: $tablinks-active-bg;
+  font-size: small;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    justify-content: space-between;
+    gap: 10px;
+
+  }
+
+  nav li {
+    flex: 1;
+    height: 1;
+  }
